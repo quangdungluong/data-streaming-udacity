@@ -48,14 +48,15 @@ services:
       - "schema-registry"
 
   connect:
-    image: confluentinc/cp-kafka-connect:latest
+    image: confluentinc/cp-kafka-connect:latest-ldbc
+    container_name: connect
     ports:
       - "8083:8083"
     environment:
       CONNECT_BOOTSTRAP_SERVERS: "PLAINTEXT://kafka0:19092"
       CONNECT_GROUP_ID: "connect"
       CONNECT_REST_ADVERTISED_HOST_NAME: "connect"
-      CONNECT_PLUGIN_PATH: "/usr/share/java"
+      CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components/"
       CONNECT_INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
       CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
       CONNECT_KEY_CONVERTER: "io.confluent.connect.avro.AvroConverter"
@@ -95,6 +96,9 @@ services:
       CONNECT_URL: "http://connect:8083"
     depends_on:
       - "connect"
+    network_mode: bridge
+    extra_hosts:
+      - "connect:host-gateway"
 
   topics-ui:
     image: landoop/kafka-topics-ui:0.9.4
@@ -106,6 +110,9 @@ services:
       KAFKA_REST_PROXY_URL: "http://rest-proxy:8082"
     depends_on:
       - "rest-proxy"
+    network_mode: bridge
+    extra_hosts:
+      - "rest-proxy:host-gateway"
 
   schema-registry-ui:
     image: landoop/schema-registry-ui:0.9.5
@@ -117,6 +124,9 @@ services:
       SCHEMAREGISTRY_URL: "http://schema-registry:8081/"
     depends_on:
       - "schema-registry"
+    network_mode: bridge
+    extra_hosts:
+      - "schema-registry:host-gateway"
 
   postgres:
     image: postgres:11

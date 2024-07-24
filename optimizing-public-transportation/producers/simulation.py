@@ -1,6 +1,7 @@
 """Defines a time simulation responsible for executing any registered
 producers
 """
+
 import datetime
 import time
 from enum import IntEnum
