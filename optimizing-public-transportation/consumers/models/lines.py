@@ -1,4 +1,5 @@
 """Contains functionality related to Lines"""
+
 import json
 import logging
 

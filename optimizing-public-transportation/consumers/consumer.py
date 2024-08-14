@@ -32,10 +32,11 @@ class KafkaConsumer:
         self.offset_earliest = offset_earliest
 
         self.broker_properties = {
-            "bootstrap.servers": "PLAINTEXT://localhost:9092, PLAINTEXT://localhost:9093, PLAINTEXT://localhost:9094",
-            "group.id": topic_name_pattern,
+            "bootstrap.servers": "PLAINTEXT://localhost:9092",
+            "group.id": self.topic_name_pattern,
             "default.topic.config": {
-                "auto.offset.reset": "earliest" if offset_earliest else "latest"
+                "acks": "all",
+                "auto.offset.reset": "earliest" if offset_earliest else "latest",
             },
         }
 
@@ -44,6 +45,7 @@ class KafkaConsumer:
             self.consumer = AvroConsumer(self.broker_properties)
         else:
             self.consumer = Consumer(self.broker_properties)
+            pass
 
         self.consumer.subscribe([topic_name_pattern], on_assign=self.on_assign)
 
@@ -53,7 +55,9 @@ class KafkaConsumer:
         # the beginning or earliest
         logger.info("on_assign is incomplete - skipping")
         for partition in partitions:
-            partition.offset == OFFSET_BEGINNING
+            pass
+            if self.offset_earliest is True:
+                partition.offset == OFFSET_BEGINNING
 
         logger.info("partitions assigned for %s", self.topic_name_pattern)
         consumer.assign(partitions)
@@ -78,7 +82,7 @@ class KafkaConsumer:
                 return 0
             else:
                 self.message_handler(message)
-                logger.info(f"Consumer Message Key:{message}")
+                # logger.info(f"Consumer Message Key:{message}")
                 return 1  # message is processed
 
     def close(self):
