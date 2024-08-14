@@ -64,16 +64,6 @@ class Producer:
         )
 
         futures = client.create_topics([topic])
-
-        for topic, future in futures.items():
-            try:
-                future.result()
-                # logger.info(f"topic {topic} created")
-            except Exception as e:
-                # logger.error(f"failed to create topic: {e}")
-                # raise
-                pass
-
         # logger.info("topic creation kafka integration incomplete - skipping")
 
     def close(self):

@@ -87,7 +87,6 @@ class Weather(Producer):
 
         try:
             resp.raise_for_status()
-            print(resp.raise_for_status())
         except:
             logger.warning(
                 "Failed to send weather data to kafka, temp: %s, status: %s",
