@@ -1,0 +1,769 @@
+:: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /opt/bitnami/spark/ivy/cache
+The jars for the packages stored in: /opt/bitnami/spark/ivy/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-456af6e6-bdcd-444f-9ede-21e9799fb382;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.2 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.2 in central
+	found org.apache.kafka#kafka-clients;2.6.0 in central
+	found com.github.luben#zstd-jni;1.4.8-1 in central
+	found org.lz4#lz4-java;1.7.1 in central
+	found org.xerial.snappy#snappy-java;1.1.8.2 in central
+	found org.slf4j#slf4j-api;1.7.30 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+	found org.apache.commons#commons-pool2;2.6.2 in central
+:: resolution report :: resolve 650ms :: artifacts dl 13ms
+	:: modules in use:
+	com.github.luben#zstd-jni;1.4.8-1 from central in [default]
+	org.apache.commons#commons-pool2;2.6.2 from central in [default]
+	org.apache.kafka#kafka-clients;2.6.0 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.2 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.2 from central in [default]
+	org.lz4#lz4-java;1.7.1 from central in [default]
+	org.slf4j#slf4j-api;1.7.30 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.8.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   9   |   0   |   0   |   0   ||   9   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-456af6e6-bdcd-444f-9ede-21e9799fb382
+	confs: [default]
+	0 artifacts copied, 9 already retrieved (0kB/53ms)
+24/08/19 09:40:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+24/08/19 09:40:03 INFO SparkContext: Running Spark version 3.2.1
+24/08/19 09:40:03 INFO ResourceUtils: ==============================================================
+24/08/19 09:40:03 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/08/19 09:40:03 INFO ResourceUtils: ==============================================================
+24/08/19 09:40:03 INFO SparkContext: Submitted application: stedi-app
+24/08/19 09:40:03 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/08/19 09:40:03 INFO ResourceProfile: Limiting resource is cpu
+24/08/19 09:40:03 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/08/19 09:40:03 INFO SecurityManager: Changing view acls to: root
+24/08/19 09:40:03 INFO SecurityManager: Changing modify acls to: root
+24/08/19 09:40:03 INFO SecurityManager: Changing view acls groups to: 
+24/08/19 09:40:03 INFO SecurityManager: Changing modify acls groups to: 
+24/08/19 09:40:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+24/08/19 09:40:03 INFO Utils: Successfully started service 'sparkDriver' on port 36157.
+24/08/19 09:40:03 INFO SparkEnv: Registering MapOutputTracker
+24/08/19 09:40:03 INFO SparkEnv: Registering BlockManagerMaster
+24/08/19 09:40:03 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/08/19 09:40:03 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/08/19 09:40:03 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/08/19 09:40:04 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-9cffbf0d-5647-4c71-815f-fa86727d622d
+24/08/19 09:40:04 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+24/08/19 09:40:04 INFO SparkEnv: Registering OutputCommitCoordinator
+24/08/19 09:40:04 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+24/08/19 09:40:04 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+24/08/19 09:40:04 INFO Utils: Successfully started service 'SparkUI' on port 4042.
+24/08/19 09:40:04 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ba072297cb2c:4042
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar at spark://ba072297cb2c:36157/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar at spark://ba072297cb2c:36157/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.apache.kafka_kafka-clients-2.6.0.jar at spark://ba072297cb2c:36157/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.apache.commons_commons-pool2-2.6.2.jar at spark://ba072297cb2c:36157/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.spark-project.spark_unused-1.0.0.jar at spark://ba072297cb2c:36157/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/com.github.luben_zstd-jni-1.4.8-1.jar at spark://ba072297cb2c:36157/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.lz4_lz4-java-1.7.1.jar at spark://ba072297cb2c:36157/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar at spark://ba072297cb2c:36157/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added JAR file:///opt/bitnami/spark/ivy/jars/org.slf4j_slf4j-api-1.7.30.jar at spark://ba072297cb2c:36157/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar at file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar at file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.apache.kafka_kafka-clients-2.6.0.jar at file:///opt/bitnami/spark/ivy/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.apache.kafka_kafka-clients-2.6.0.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.kafka_kafka-clients-2.6.0.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.apache.commons_commons-pool2-2.6.2.jar at file:///opt/bitnami/spark/ivy/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.commons_commons-pool2-2.6.2.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.spark-project.spark_unused-1.0.0.jar at file:///opt/bitnami/spark/ivy/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.spark-project.spark_unused-1.0.0.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/com.github.luben_zstd-jni-1.4.8-1.jar at file:///opt/bitnami/spark/ivy/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/com.github.luben_zstd-jni-1.4.8-1.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/com.github.luben_zstd-jni-1.4.8-1.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.lz4_lz4-java-1.7.1.jar at file:///opt/bitnami/spark/ivy/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.lz4_lz4-java-1.7.1.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar at file:///opt/bitnami/spark/ivy/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.xerial.snappy_snappy-java-1.1.8.2.jar
+24/08/19 09:40:04 INFO SparkContext: Added file file:///opt/bitnami/spark/ivy/jars/org.slf4j_slf4j-api-1.7.30.jar at file:///opt/bitnami/spark/ivy/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: Copying /opt/bitnami/spark/ivy/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.slf4j_slf4j-api-1.7.30.jar
+24/08/19 09:40:04 INFO Executor: Starting executor ID driver on host ba072297cb2c
+24/08/19 09:40:04 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: /opt/bitnami/spark/ivy/jars/org.apache.kafka_kafka-clients-2.6.0.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.kafka_kafka-clients-2.6.0.jar
+24/08/19 09:40:04 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: /opt/bitnami/spark/ivy/jars/org.slf4j_slf4j-api-1.7.30.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.slf4j_slf4j-api-1.7.30.jar
+24/08/19 09:40:04 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: /opt/bitnami/spark/ivy/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.spark-project.spark_unused-1.0.0.jar
+24/08/19 09:40:04 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: /opt/bitnami/spark/ivy/jars/com.github.luben_zstd-jni-1.4.8-1.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/com.github.luben_zstd-jni-1.4.8-1.jar
+24/08/19 09:40:04 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: /opt/bitnami/spark/ivy/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar
+24/08/19 09:40:04 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:04 INFO Utils: /opt/bitnami/spark/ivy/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar
+24/08/19 09:40:05 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: /opt/bitnami/spark/ivy/jars/org.lz4_lz4-java-1.7.1.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.lz4_lz4-java-1.7.1.jar
+24/08/19 09:40:05 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: /opt/bitnami/spark/ivy/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.xerial.snappy_snappy-java-1.1.8.2.jar
+24/08/19 09:40:05 INFO Executor: Fetching file:///opt/bitnami/spark/ivy/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: /opt/bitnami/spark/ivy/jars/org.apache.commons_commons-pool2-2.6.2.jar has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.commons_commons-pool2-2.6.2.jar
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO TransportClientFactory: Successfully created connection to ba072297cb2c/192.168.208.4:36157 after 44 ms (0 ms spent in bootstraps)
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/com.github.luben_zstd-jni-1.4.8-1.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp2881032313488957983.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp2881032313488957983.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/com.github.luben_zstd-jni-1.4.8-1.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/com.github.luben_zstd-jni-1.4.8-1.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp5308642669050784104.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp5308642669050784104.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.commons_commons-pool2-2.6.2.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.commons_commons-pool2-2.6.2.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.apache.kafka_kafka-clients-2.6.0.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp1515542282992358923.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp1515542282992358923.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.kafka_kafka-clients-2.6.0.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.kafka_kafka-clients-2.6.0.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp7576850496934442646.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp7576850496934442646.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.lz4_lz4-java-1.7.1.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.lz4_lz4-java-1.7.1.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp740063227255111898.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp740063227255111898.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.spark-project.spark_unused-1.0.0.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.spark-project.spark_unused-1.0.0.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp3976630126587193888.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp3976630126587193888.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp7001047026191734863.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp7001047026191734863.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.slf4j_slf4j-api-1.7.30.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.slf4j_slf4j-api-1.7.30.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp2074012178320489102.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp2074012178320489102.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.xerial.snappy_snappy-java-1.1.8.2.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.xerial.snappy_snappy-java-1.1.8.2.jar to class loader
+24/08/19 09:40:05 INFO Executor: Fetching spark://ba072297cb2c:36157/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar with timestamp 1724060403213
+24/08/19 09:40:05 INFO Utils: Fetching spark://ba072297cb2c:36157/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp3691295168363081273.tmp
+24/08/19 09:40:05 INFO Utils: /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/fetchFileTemp3691295168363081273.tmp has been previously copied to /tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar
+24/08/19 09:40:05 INFO Executor: Adding file:/tmp/spark-a69263d1-9bcb-42ce-b39c-7200a114c310/userFiles-e7033ea6-90a1-4c5b-8252-8a46d5b99580/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar to class loader
+24/08/19 09:40:05 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43937.
+24/08/19 09:40:05 INFO NettyBlockTransferService: Server created on ba072297cb2c:43937
+24/08/19 09:40:05 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/08/19 09:40:05 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ba072297cb2c, 43937, None)
+24/08/19 09:40:05 INFO BlockManagerMasterEndpoint: Registering block manager ba072297cb2c:43937 with 366.3 MiB RAM, BlockManagerId(driver, ba072297cb2c, 43937, None)
+24/08/19 09:40:05 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ba072297cb2c, 43937, None)
+24/08/19 09:40:05 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ba072297cb2c, 43937, None)
+24/08/19 09:40:05 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/08/19 09:40:05 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+24/08/19 09:40:11 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+^CERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 503, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/opt/bitnami/python/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/context.py", line 292, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/context.py", line 1195, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 111, in deco
+    return f(*a, **kw)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o15.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 503, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+Traceback (most recent call last):
+  File "/home/workspace/starter/sparkpykafkajoin.py", line 145, in <module>
+    joinedCustomerRiskAndBirthDf.selectExpr(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming.py", line 101, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1321, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 111, in deco
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/protocol.py", line 334, in get_return_value
+py4j.protocol.Py4JError: An error occurred while calling o98.awaitTermination
+24/08/19 09:46:37 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@2fdbcf1e rejected from java.util.concurrent.ThreadPoolExecutor@2779ff88[Shutting down, pool size = 15, active threads = 15, queued tasks = 0, completed tasks = 11412]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@1838da5a rejected from java.util.concurrent.ThreadPoolExecutor@2779ff88[Shutting down, pool size = 14, active threads = 14, queued tasks = 0, completed tasks = 11413]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR WriteToDataSourceV2Exec: Data source write support org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@e816266 is aborting.
+24/08/19 09:46:37 ERROR WriteToDataSourceV2Exec: Data source write support org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@e816266 aborted.
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 100 (task 11414, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 100 (task 11414, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 100 (task 11414, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 98 (task 11412, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 99 (task 11413, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 98 (task 11412, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 99 (task 11413, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 98 (task 11412, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 99 (task 11413, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@184fb1f0 rejected from java.util.concurrent.ThreadPoolExecutor@2779ff88[Shutting down, pool size = 11, active threads = 11, queued tasks = 0, completed tasks = 11416]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@71e0ddb9 rejected from java.util.concurrent.ThreadPoolExecutor@2779ff88[Shutting down, pool size = 11, active threads = 11, queued tasks = 0, completed tasks = 11416]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@4b2bb91c rejected from java.util.concurrent.ThreadPoolExecutor@2779ff88[Shutting down, pool size = 11, active threads = 11, queued tasks = 0, completed tasks = 11416]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR MicroBatchExecution: Query [id = 2bd08d75-8241-4c29-8fff-edca7ed0e966, runId = e4880e9d-5ece-47da-88d2-4828e58f5a4c] terminated with error
+org.apache.spark.SparkException: Writing job aborted
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.writingJobAbortedError(QueryExecutionErrors.scala:613)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2(WriteToDataSourceV2Exec.scala:386)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2$(WriteToDataSourceV2Exec.scala:330)
+	at org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2Exec.writeWithV2(WriteToDataSourceV2Exec.scala:279)
+	at org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2Exec.run(WriteToDataSourceV2Exec.scala:290)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result$lzycompute(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.executeCollect(V2CommandExec.scala:49)
+	at org.apache.spark.sql.Dataset.collectFromPlan(Dataset.scala:3715)
+	at org.apache.spark.sql.Dataset.$anonfun$collect$1(Dataset.scala:2971)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3706)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3704)
+	at org.apache.spark.sql.Dataset.collect(Dataset.scala:2971)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:603)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:598)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:598)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:228)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:193)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:57)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:187)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:303)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:286)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:209)
+Caused by: org.apache.spark.SparkException: Job 56 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1166)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1164)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:79)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:1164)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:2666)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:84)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:2566)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2086)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1442)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2086)
+	at org.apache.spark.SparkContext.$anonfun$new$38(SparkContext.scala:667)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2019)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:938)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2214)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2(WriteToDataSourceV2Exec.scala:354)
+	... 40 more
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 102 (task 11416, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 102 (task 11416, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 102 (task 11416, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@4c8ed3f4 rejected from java.util.concurrent.ThreadPoolExecutor@2779ff88[Shutting down, pool size = 10, active threads = 10, queued tasks = 0, completed tasks = 11417]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 104 (task 11418, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 104 (task 11418, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 104 (task 11418, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@26907627 rejected from java.util.concurrent.ThreadPoolExecutor@2779ff88[Shutting down, pool size = 9, active threads = 9, queued tasks = 0, completed tasks = 11418]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 106 (task 11420, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 103 (task 11417, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 103 (task 11417, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 103 (task 11417, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 106 (task 11420, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 106 (task 11420, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 105 (task 11419, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 105 (task 11419, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 105 (task 11419, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR OutputCommitCoordinator: canCommit called after coordinator was stopped (is SparkEnv shutdown in progress)?
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 108 (task 11422, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 108 (task 11422, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 108 (task 11422, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR OutputCommitCoordinator: canCommit called after coordinator was stopped (is SparkEnv shutdown in progress)?
+24/08/19 09:46:37 ERROR Utils: Aborting task
+org.apache.spark.executor.CommitDeniedException: Commit denied for partition 107 (task 11421, attempt 0, stage 170.0)
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.commitDeniedError(QueryExecutionErrors.scala:620)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:433)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 107 (task 11421, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 107 (task 11421, attempt 0, stage 170.0)
+24/08/19 09:46:37 WARN NettyRpcEnv: Ignored failure: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@5ac34951 rejected from java.util.concurrent.ScheduledThreadPoolExecutor@706744c8[Shutting down, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 0]
+24/08/19 09:46:37 WARN NettyRpcEnv: Ignored failure: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@517be705 rejected from java.util.concurrent.ScheduledThreadPoolExecutor@706744c8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+24/08/19 09:46:37 WARN StateStore: Error managing HDFSStateStoreProvider[id = (op=0,part=170),dir = file:/tmp/checkPointKafka/state/0/170/right-keyWithIndexToValue], stopping management thread
+24/08/19 09:46:37 WARN StateStore: Error running maintenance thread
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:103)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:87)
+	at org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef.verifyIfInstanceActive(StateStoreCoordinator.scala:109)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.$anonfun$verifyIfStoreInstanceActive$1(StateStore.scala:630)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.$anonfun$verifyIfStoreInstanceActive$1$adapted(StateStore.scala:630)
+	at scala.Option.map(Option.scala:230)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.verifyIfStoreInstanceActive(StateStore.scala:630)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.$anonfun$doMaintenance$2(StateStore.scala:595)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.$anonfun$doMaintenance$2$adapted(StateStore.scala:593)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.doMaintenance(StateStore.scala:593)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.$anonfun$startMaintenanceIfNeeded$1(StateStore.scala:577)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$MaintenanceTask$$anon$1.run(StateStore.scala:442)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.spark.rpc.RpcEnvStoppedException: RpcEnv already stopped.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:176)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:144)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.askAbortable(NettyRpcEnv.scala:242)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.askAbortable(NettyRpcEnv.scala:555)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:559)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:102)
+	... 21 more
+24/08/19 09:46:37 ERROR Utils: Aborting task
+java.lang.NullPointerException
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:425)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 110 (task 11424, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 110 (task 11424, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Utils: Uncaught exception in thread Executor task launch worker for task 110.0 in stage 170.0 (TID 11424)
+java.lang.NullPointerException
+	at org.apache.spark.scheduler.Task.$anonfun$run$2(Task.scala:152)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1442)
+	at org.apache.spark.scheduler.Task.run(Task.scala:150)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Executor: Exception in task 110.0 in stage 170.0 (TID 11424): null
+24/08/19 09:46:37 ERROR Utils: Aborting task
+java.lang.NullPointerException
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:425)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 111 (task 11425, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 111 (task 11425, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Utils: Uncaught exception in thread Executor task launch worker for task 111.0 in stage 170.0 (TID 11425)
+java.lang.NullPointerException
+	at org.apache.spark.scheduler.Task.$anonfun$run$2(Task.scala:152)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1442)
+	at org.apache.spark.scheduler.Task.run(Task.scala:150)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Executor: Exception in task 111.0 in stage 170.0 (TID 11425): null
+24/08/19 09:46:37 ERROR Utils: Aborting task
+java.lang.NullPointerException
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:425)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 112 (task 11426, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 112 (task 11426, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Utils: Uncaught exception in thread Executor task launch worker for task 112.0 in stage 170.0 (TID 11426)
+java.lang.NullPointerException
+	at org.apache.spark.scheduler.Task.$anonfun$run$2(Task.scala:152)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1442)
+	at org.apache.spark.scheduler.Task.run(Task.scala:150)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Executor: Exception in task 112.0 in stage 170.0 (TID 11426): null
+24/08/19 09:46:37 ERROR Utils: Aborting task
+java.lang.NullPointerException
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.$anonfun$run$1(WriteToDataSourceV2Exec.scala:425)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1496)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:457)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:358)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborting commit for partition 109 (task 11423, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR DataWritingSparkTask: Aborted commit for partition 109 (task 11423, attempt 0, stage 170.0)
+24/08/19 09:46:37 ERROR Utils: Uncaught exception in thread Executor task launch worker for task 109.0 in stage 170.0 (TID 11423)
+java.lang.NullPointerException
+	at org.apache.spark.scheduler.Task.$anonfun$run$2(Task.scala:152)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1442)
+	at org.apache.spark.scheduler.Task.run(Task.scala:150)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24/08/19 09:46:37 ERROR Executor: Exception in task 109.0 in stage 170.0 (TID 11423): null
